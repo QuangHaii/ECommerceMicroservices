@@ -1,4 +1,5 @@
-﻿using ECommerceMicroservices.Models;
+﻿using ECommerceMicroservices.Data;
+using ECommerceMicroservices.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
@@ -9,17 +10,10 @@ namespace ECommerceMicroservices.Controllers
 	[ApiController]
 	public class ProductController : ControllerBase
 	{
-		private readonly IMongoCollection<Product> _productCollection;
-		public ProductController()
+		private readonly IMongoCollection<Product>? _productCollection;
+		public ProductController(MongoDbService mongoDbService)
 		{
-			var dbHost = "localhost";
-			var dbName = "ECommerceDatabase";
-			var connectionString = $"mongodb://{dbHost}:27017/{dbName}";
-			
-			var mongoUrl = MongoUrl.Create(connectionString);
-			var mongoClient = new MongoClient(mongoUrl);
-			var database = mongoClient.GetDatabase(mongoUrl.DatabaseName);
-			_productCollection = database.GetCollection<Product>("Products");
+			_productCollection = mongoDbService.Database?.GetCollection<Product>("Products");
 		}
 
 		[HttpGet]
