@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceMicroservices", "ECommerceMicroservices.csproj", "{EF5FAAB6-23D5-4762-BF91-A23BEB20A2A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceMicroservices", "ECommerceMicroservices.csproj", "{EF5FAAB6-23D5-4762-BF91-A23BEB20A2A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{13A9907D-6095-4F4B-BBE2-B976D3E6269D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainTest", "..\DomainTest\DomainTest.csproj", "{239648E8-29E4-43E0-98BA-56BA4B3ABCE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{EF5FAAB6-23D5-4762-BF91-A23BEB20A2A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF5FAAB6-23D5-4762-BF91-A23BEB20A2A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF5FAAB6-23D5-4762-BF91-A23BEB20A2A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{239648E8-29E4-43E0-98BA-56BA4B3ABCE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{239648E8-29E4-43E0-98BA-56BA4B3ABCE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{239648E8-29E4-43E0-98BA-56BA4B3ABCE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{239648E8-29E4-43E0-98BA-56BA4B3ABCE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{239648E8-29E4-43E0-98BA-56BA4B3ABCE1} = {13A9907D-6095-4F4B-BBE2-B976D3E6269D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6BDCCF3-5ED1-4846-8CF4-409CC3AD827B}
